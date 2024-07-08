@@ -29,6 +29,11 @@
                   <Font name="Nunito Bold" size="16.0" />
                </font>
             </Button>
+            <Button fx:id="btnVerif" layoutX="105.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Verifikasi Pemilih">
+               <font>
+                  <Font name="Nunito Bold" size="16.0" />
+               </font>
+            </Button>
          </children>
       </HBox>
       <Pane fx:id="pnMain" prefHeight="649.0" prefWidth="1040.0" />

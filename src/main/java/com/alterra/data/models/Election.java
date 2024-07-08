@@ -1,15 +1,17 @@
 package com.alterra.data.models;
 
-import java.sql.Timestamp;
 
 public class Election {
     private String uid;
-    private Timestamp timeStart;
-    private Timestamp timeEnd;
-    public Election(String uid, Timestamp timeStart, Timestamp timeEnd) {
-        this.uid = uid;
+    private String title;
+    public String timeStart;
+    public String timeEnd;
+    public String electionDate;
+    public Election(String title ,String timeStart, String timeEnd,String electionDate) {
+        this.title = title;
         this.timeStart = timeStart;
         this.timeEnd = timeEnd;
+        this.electionDate = electionDate;
     }
     public Election() {
 
@@ -20,21 +22,37 @@ public class Election {
     public void setUid(String uid) {
         this.uid = uid;
     }
-    public Timestamp getTimeStart() {
+    public String getTimeStart() {
         return timeStart;
     }
-    public void setTimeStart(Timestamp timeStart) {
+    public void setTimeStart(String timeStart) {
         this.timeStart = timeStart;
     }
-    public Timestamp getTimeEnd() {
+    public String getTimeEnd() {
         return timeEnd;
     }
-    public void setTimeEnd(Timestamp timeEnd) {
+    public void setTimeEnd(String timeEnd) {
         this.timeEnd = timeEnd;
+    }
+
+    
+
+   
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public static void recordVote() {
         
+    }
+    public String getElectionDate() {
+        return electionDate;
+    }
+    public void setElectionDate(String electionDate) {
+        this.electionDate = electionDate;
     }
 
     

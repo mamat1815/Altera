@@ -9,7 +9,7 @@ public class FirebaseInitializer {
     @SuppressWarnings("deprecation")
     public static void initialize() throws IOException {
         try {
-            FileInputStream serviceAccount = new FileInputStream("alterra-elvis-firebase-adminsdk-aljyo-6eeab2f959.json");
+            FileInputStream serviceAccount = new FileInputStream("alterra-elvis-firebase-adminsdk-aljyo-2d63a3efed.json");
             
             FirebaseOptions options = new FirebaseOptions.Builder()
                 .setCredentials(GoogleCredentials.fromStream(serviceAccount))

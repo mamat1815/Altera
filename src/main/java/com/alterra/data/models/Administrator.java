@@ -1,5 +1,7 @@
 package com.alterra.data.models;
 
+import java.util.Date;
+
 import com.alterra.utility.AlertUtil;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
@@ -46,7 +48,8 @@ public class Administrator extends User{
                 .setDisabled(false);
 
             UserRecord userRecord = auth.createUser(request);
-            User user = new User(userRecord.getUid(), roleInt, name, username, email, password, new Vote());
+            Date d = new Date();
+            User user = new User(userRecord.getUid(), roleInt, name, username, email, password, new Vote("","","",d,""));
             dbRef.child(userRecord.getUid()).setValue(user, (error, ref) -> {
                 if (error != null) {
                     System.err.println("Data could not be saved: " + error.getMessage());
@@ -54,6 +57,7 @@ public class Administrator extends User{
                     error.toException().printStackTrace();
                 } else {
                     System.out.println("Data saved successfully.");
+                    System.out.println(user.getVote().getId());
                 }
             });
         } catch (FirebaseAuthException e) {

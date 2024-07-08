@@ -15,9 +15,7 @@ public class ViewFactory {
         return fxmlLoader.load();
     } 
     public Pane loadFXMLPane(String fxml) throws IOException {
-        //FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/com/alterra/"+fxml + ".fxml"));
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        
         return fxmlLoader.load();
     } 
 }

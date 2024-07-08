@@ -2,23 +2,19 @@ package com.alterra;
 
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import com.alterra.utility.ViewFactory;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.layout.Pane;
 
-public class SurveyorController {
+public class SurveyorController implements Initializable{
     
-    @FXML
-    private Spinner<Integer> hourSpinner;
-
-    @FXML
-    private Spinner<Integer> minuteSpinner;
 
     @FXML
     private Button setTimeButton;
@@ -30,16 +26,13 @@ public class SurveyorController {
     private Button btnElection;
 
     @FXML
-    private Pane pnMain;
+    private Button btnVerif;
 
     @FXML
-    private void initialize() {
-        // Inisialisasi spinner untuk jam dan menit
-        // hourSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 23));
-        // minuteSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 59));
-        openPage("election-view");
-        btnElection.setStyle("-fx-background-color: #4880FF");
-    }
+    private Pane pnMain;
+    
+
+
 
     @SuppressWarnings("exports")
     public void handleButtonAction(ActionEvent event) {
@@ -49,17 +42,13 @@ public class SurveyorController {
         } else if (event.getSource() == btnCandidate) {
             openPage("candidate-view");
             btnCandidate.setStyle("-fx-background-color: #4880FF");
+        } else if (event.getSource() == btnVerif) {
+            openPage("verif-view");
+            btnVerif.setStyle("-fx-background-color: #4880FF");
         }
     }
 
-    @FXML
-    private void setTime() {
-        int hour = hourSpinner.getValue();
-        int minute = minuteSpinner.getValue();
-        // Lakukan sesuatu dengan waktu yang dipilih
-        System.out.println("Waktu yang dipilih: " + hour + ":" + minute);
-        // Misalnya, Anda bisa menyimpan waktu ke suatu variabel atau melakukan aksi lainnya
-    }
+
 
     @FXML
     public void openPage(String fxml) {
@@ -77,5 +66,14 @@ public class SurveyorController {
     private void resetButtonStyles() {
         btnCandidate.setStyle(null);
         btnElection.setStyle(null);
+        btnVerif.setStyle(null);
+    }
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        openPage("candidate-view");
+        btnCandidate.setStyle("-fx-background-color: #4880FF");
+
+        
     }
 }

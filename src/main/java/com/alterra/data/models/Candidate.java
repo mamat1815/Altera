@@ -43,6 +43,7 @@ public class Candidate extends User{
     public void setMisi(String misi) {
         this.misi = misi;
     }
+
     
 
 

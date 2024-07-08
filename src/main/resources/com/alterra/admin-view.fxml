@@ -80,11 +80,6 @@
                               <Font name="Nunito SemiBold" size="18.0" />
                            </font>
                         </Label>
-                        <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="295.0" text="Cari">
-                           <graphic>
-                              <TextField prefHeight="25.0" prefWidth="251.0" />
-                           </graphic>
-                        </Button>
                         <TableView fx:id="tbUser" VBox.vgrow="ALWAYS">
                           <columns>
                             <TableColumn fx:id="colEmail" prefWidth="75.0" text="Email" />

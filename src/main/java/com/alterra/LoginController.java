@@ -39,9 +39,10 @@ public class LoginController implements Initializable {
         String email = emailField.getText();
         String password = passwordField.getText();
         System.out.println("handle Login");
-        if (Utility.isValidAcc(email, password)) {
+  
             System.out.println("signIn");
             User.signIn(email, password, new User.LoginCallback() {
+                
                 @Override
                 public void onSuccess(User user) {
                     System.out.println("Login successful for: " + user.getName());
@@ -110,6 +111,7 @@ public class LoginController implements Initializable {
                             }
                              // Menampilkan stage dan menunggu sampai ditutup
                         } catch (IOException e) {
+                            System.out.print("eror");
                             e.printStackTrace();
                         }
                     });
@@ -121,7 +123,7 @@ public class LoginController implements Initializable {
                 }
             });
         }
-    }
+    
 
     private void showAlert(String title, String message) {
         Alert alert = new Alert(AlertType.INFORMATION);

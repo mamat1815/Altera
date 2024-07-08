@@ -68,7 +68,6 @@ public class AdminController implements Initializable{
         cbRole.getItems().add("Administrator");
         cbRole.getItems().add("Supervisor");
         cbRole.getItems().add("Surveyor");
-        cbRole.getItems().add("User");
         dbRef = FirebaseDatabase.getInstance().getReference("users");
 
         users = new ArrayList<>();

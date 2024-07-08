@@ -23,7 +23,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FirebaseInitializer.initialize();
-        scene = new Scene(ViewFactory.loadFXML("login-view"), 640, 480);
+        scene = new Scene(ViewFactory.loadFXML("administrator-view"), 640, 480);
         stage.setScene(scene);
         stage.show();
     }

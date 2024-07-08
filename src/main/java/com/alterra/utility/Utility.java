@@ -9,7 +9,8 @@ public class Utility {
         
         if (email.isEmpty()) {
             status = false;
-            AlertUtil.showAlert("Email Kosong", "Email Kosong Mohon Isi Dengan Benar");
+            System.out.println(status);
+            //AlertUtil.showAlert("Email Kosong", "Email Kosong Mohon Isi Dengan Benar");
         } else  {
             for (int i = 0; i < email.length(); i++) {
                 if (email.charAt(i) == '@') {
@@ -24,13 +25,14 @@ public class Utility {
             if (dot == true && at == true) {
                 status = true;
             } else if (dot == false) {
-                AlertUtil.showAlert("Email Tidak Valid", "Periksa Email Anda Kemungkinan Kekurangan '@' ");
+                System.out.println(status);
+                // AlertUtil.showAlert("Email Tidak Valid", "Periksa Email Anda Kemungkinan Kekurangan '@' ");
             } else if (at == false) {
-                AlertUtil.showAlert("Email Tidak Valid", "Periksa Email Anda Kemungkinan Kekurangan '.'");
+                // AlertUtil.showAlert("Email Tidak Valid", "Periksa Email Anda Kemungkinan Kekurangan '.'");
                 
             }
         }
-
+        System.out.println(status);
         return status;
     }
 
