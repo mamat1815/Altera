@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #F5F6FA;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alterra.UserController">
+   <children>
+      <HBox prefHeight="800.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="800.0" style="-fx-background-radius: 0 40 40 0; -fx-background-color: #4880FF;">
+               <children>
+                  <ImageView fitHeight="125.0" fitWidth="321.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons/ELv%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lbNama" text="Login">
+                     <font>
+                        <Font name="Nunito ExtraBold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="38.0" prefWidth="238.0" text="Make your choice easier with Elvis." textFill="WHITE">
+                     <font>
+                        <Font name="Nunito Regular" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding></VBox>
+            <VBox prefHeight="800.0" prefWidth="1000.0" spacing="10.0">
+               <children>
+                  <Pane prefHeight="767.0" prefWidth="600.0" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="200.0" right="200.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

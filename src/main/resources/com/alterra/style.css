@@ -1,0 +1,28 @@
+
+.button
+{
+    -fx-background-color: white;
+ 
+    -fx-border-width : 5px , 5px , 5px ,5px;
+    -fx-border-radius : 20px;
+}
+.button:hover{
+    -fx-background-color : #4880FF;
+    -fx-text-fill : #ffffff;
+    -fx-border-width : 2px , 2px , 2px ,2px;
+    -fx-background-size: cover;
+}
+.button:pressed
+{
+    -fx-background-color : #4880FF;
+    -fx-text-fill : #ffffff;
+    -fx-border-width : 2px , 2px , 2px ,2px;
+}
+
+.card {
+    -fx-border-width : 200px , 200px , 200px ,200px;
+    -fx-background-radius : 20px;
+    -fx-background-color: white;
+}
+
+

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="692.0" prefWidth="1080.0" spacing="12.0" style="-fx-background-color: #F5F6FA;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alterra.AdminController">
+   <children>
+      <Label text="Administrator">
+         <font>
+            <Font name="Nunito ExtraBold" size="20.0" />
+         </font></Label>
+      <Pane prefHeight="649.0" prefWidth="1040.0">
+         <children>
+            <HBox prefHeight="611.0" prefWidth="1040.0" spacing="10.0">
+               <children>
+                  <VBox prefHeight="611.0" prefWidth="535.0" spacing="3.0" styleClass="card">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="100.0" text="Buat Akun">
+                           <font>
+                              <Font name="Nunito Black" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Tipe Akun">
+                           <font>
+                              <Font name="Nunito Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="cbRole" prefHeight="25.0" prefWidth="437.0" />
+                        <Label layoutX="10.0" layoutY="37.0" text="Nama">
+                           <font>
+                              <Font name="Nunito Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfNama" />
+                        <Label layoutX="10.0" layoutY="82.0" text="Email">
+                           <font>
+                              <Font name="Nunito Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfEmail" layoutX="10.0" layoutY="102.0" />
+                        <Label layoutX="10.0" layoutY="127.0" text="Username">
+                           <font>
+                              <Font name="Nunito Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfUsername" layoutX="10.0" layoutY="147.0" />
+                        <Label layoutX="10.0" layoutY="172.0" text="Password">
+                           <font>
+                              <Font name="Nunito Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfPassword" layoutX="10.0" layoutY="192.0" />
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="btnCreate" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#handleCreateUser" style="-fx-background-radius: 200; -fx-background-color: #FF7323;" text="Buat Akun">
+                                 <font>
+                                    <Font name="Nunito Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="611.0" prefWidth="447.0" styleClass="card">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="119.0" text="Cek Akun">
+                           <font>
+                              <Font name="Nunito SemiBold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="295.0" text="Cari">
+                           <graphic>
+                              <TextField prefHeight="25.0" prefWidth="251.0" />
+                           </graphic>
+                        </Button>
+                        <TableView fx:id="tbUser" VBox.vgrow="ALWAYS">
+                          <columns>
+                            <TableColumn fx:id="colEmail" prefWidth="75.0" text="Email" />
+                            <TableColumn fx:id="colNama" prefWidth="75.0" text="Username" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" text="Edit" />
+                              <Button mnemonicParsing="false" text="Hapus" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

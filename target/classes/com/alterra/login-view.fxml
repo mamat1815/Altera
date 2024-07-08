@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #F5F6FA;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alterra.LoginController">
+   <children>
+      <HBox prefHeight="800.0">
+         <children>
+            <VBox alignment="CENTER" style="-fx-background-radius: 0 40 40 0; -fx-background-color: #4880FF;">
+               <children>
+                  <ImageView fitHeight="125.0" fitWidth="529.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons/ELv%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label prefWidth="410.0" text="Make your choice easier with Elvis." textFill="WHITE">
+                     <font>
+                        <Font name="Nunito Regular" size="26.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </Label>
+                  <ImageView fitHeight="500.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons/vote-3d.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding></VBox>
+            <VBox prefHeight="800.0" prefWidth="1000.0" spacing="10.0">
+               <children>
+                  <Label text="Login">
+                     <font>
+                        <Font name="Nunito ExtraBold" size="35.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="200.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Email">
+                     <font>
+                        <Font name="Nunito Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailField" prefHeight="50.0" />
+                  <Label layoutX="30.0" layoutY="82.0" text="Password">
+                     <font>
+                        <Font name="Nunito Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="passwordField" prefHeight="50.0" />
+                  <HBox alignment="TOP_RIGHT">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleLogin" style="-fx-background-color: #4880FF; -fx-background-radius: 40;" text="Login" textFill="WHITE">
+                           <font>
+                              <Font name="Nunito Bold" size="28.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="40.0" right="40.0" top="10.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="200.0" right="200.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
